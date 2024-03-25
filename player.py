@@ -21,10 +21,10 @@ class Player:
         dx = 0
 
         if (keys[pygame.K_a] or keys[pygame.K_LEFT]) and self.rect.left + dx > 0:
-            dx = -5
+            dx = -3
 
         if (keys[pygame.K_d] or keys[pygame.K_RIGHT]) and self.rect.right + dx < 700:
-            dx = 5
+            dx = 3
 
         if keys[pygame.K_SPACE] or mouse[0]:
             if len(self.bullet_group) == 0:
@@ -45,7 +45,7 @@ class Bullet(pygame.sprite.Sprite):
 
     def update(self):
 
-        self.rect.y -= 10
+        self.rect.y -= 7
 
         if self.rect.bottom < 0:
             self.kill()
